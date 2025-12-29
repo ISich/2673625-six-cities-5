@@ -65,7 +65,13 @@ export class TSVFileReader implements FileReader {
                     location,
                 };
             })
-            .map((offerData) => OfferFactory.create(offerData, users))
+            .map((offerData) => {
+                const offer = OfferFactory.create(offerData, users);
+                if (!offer) {
+                    console.log('INVALID OFFER:', offerData);
+                }
+                return offer;
+                })
             .filter((offer): offer is Offer => offer !== null);
     }
 }

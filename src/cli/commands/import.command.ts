@@ -11,8 +11,8 @@ export class ImportCommand implements Command {
   }
 
   public users: User[] = [
-    { name: 'Kirill', email: 'kirill@gmail.com', type: UserType.Pro, avatar: 'kirillAvatar.png' },
-    { name: 'Sergey', email: 'sergey@gmail.com', type: UserType.Regular, avatar: 'sergeyAvatar.png' }
+    { name: 'name1', email: 'mail1@gmail.com', type: UserType.Pro, avatar: 'Avatar1.png' },
+    { name: 'name1', email: 'mail2@gmail.com', type: UserType.Regular, avatar: 'Avatar2.png' }
   ];
 
   public async execute(...parameters: string[]): Promise<void> {

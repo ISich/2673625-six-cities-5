@@ -96,8 +96,8 @@ export class OfferFactory {
                 return null;
             }
 
-            const isPremium = rawData.isPremium === 'True';
-            const isFavorite = rawData.isFavorite === 'True';
+            const isPremium = rawData.isPremium.toLowerCase() === 'true';
+            const isFavorite = rawData.isFavorite.toLowerCase() === 'true';
 
             const rating = parseFloat(rawData.rating.replace(',', '.'));
             if (isNaN(Number(rating)) || Number(rating) < MIN_RATING || Number(rating) > MAX_RATING) {
